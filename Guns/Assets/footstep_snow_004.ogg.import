@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/footstep_snow_004.ogg-8c5b83c7b48a9bd7b2a6d4ce5060f862.oggstr"
+
+[deps]
+
+source_file="res://Guns/Assets/footstep_snow_004.ogg"
+dest_files=[ "res://.import/footstep_snow_004.ogg-8c5b83c7b48a9bd7b2a6d4ce5060f862.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

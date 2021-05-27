@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/footstep_grass_001.ogg-f6596360392ace8ffcdc2ecce4d599d6.oggstr"
+
+[deps]
+
+source_file="res://Guns/Assets/footstep_grass_001.ogg"
+dest_files=[ "res://.import/footstep_grass_001.ogg-f6596360392ace8ffcdc2ecce4d599d6.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

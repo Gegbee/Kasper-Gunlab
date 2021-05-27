@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/switch38.ogg-f40e8cee63d8e47076351c717a125d3d.oggstr"
+
+[deps]
+
+source_file="res://Guns/Assets/switch38.ogg"
+dest_files=[ "res://.import/switch38.ogg-f40e8cee63d8e47076351c717a125d3d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

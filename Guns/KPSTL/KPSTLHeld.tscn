@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Guns/GunHeldTemplate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Guns/KPSTL/Asset/KPSTL.tscn" type="PackedScene" id=2]
+
+[node name="KPSTL" instance=ExtResource( 1 )]
+
+[node name="Gun" parent="." index="1"]
+automatic = false
+fire_rate = 0.1
+magazine_size = 11
+reload_time = 0.8
+damage = 16
+bullet_speed = 20
+min_accuracy = 2.0
+accuracy_decrease = 1.6
+max_accuracy = 12.0
+accuracy_increase_delay = 0.4
+dropped_gun = "res://Guns/KPSTL/KPSTLDropped.tscn"
+asset = NodePath("KPSTL")
+
+[node name="Muzzle" parent="Gun" index="2"]
+position = Vector2( 15, -1 )
+
+[node name="KPSTL" parent="Gun" index="3" instance=ExtResource( 2 )]

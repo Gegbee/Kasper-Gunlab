@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/switch10.ogg-9c4a9a0272f3caf83b9bf6723bb5c025.oggstr"
+
+[deps]
+
+source_file="res://Guns/Assets/switch10.ogg"
+dest_files=[ "res://.import/switch10.ogg-9c4a9a0272f3caf83b9bf6723bb5c025.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

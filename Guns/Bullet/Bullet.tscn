@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Guns/Bullet/Trail.gd" type="Script" id=1]
+[ext_resource path="res://Guns/Bullet/Bullet.gd" type="Script" id=2]
+
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 2.0
+height = 4.0
+
+[sub_resource type="Curve" id=2]
+_data = [ Vector2( 0, 0 ), 0.0, -0.161419, 0, 0, Vector2( 1, 0.7 ), 0.575494, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=3]
+colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 0.870588 )
+
+[node name="Bullet" type="KinematicBody2D"]
+z_index = 20
+z_as_relative = false
+collision_layer = 2
+collision_mask = 0
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+position = Vector2( 0, -4 )
+color = Color( 0.772549, 0.768627, 0.572549, 1 )
+polygon = PoolVector2Array( -1, 2, -1, 4, 1, 4, 1, 2, 0, 0 )
+
+[node name="Trail" type="Line2D" parent="."]
+width = 1.0
+width_curve = SubResource( 2 )
+default_color = Color( 1, 1, 1, 0.360784 )
+gradient = SubResource( 3 )
+script = ExtResource( 1 )
+targetPath = NodePath("..")
+trailLength = 6

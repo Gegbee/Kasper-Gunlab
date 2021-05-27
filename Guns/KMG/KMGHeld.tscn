@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Guns/KMG/Asset/KMG.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Guns/GunHeldTemplate.tscn" type="PackedScene" id=2]
+
+[node name="KMG" instance=ExtResource( 2 )]
+
+[node name="Gun" parent="." index="1"]
+fire_rate = 0.12
+magazine_size = 56
+reload_time = 5.8
+damage = 10
+bullet_speed = 60
+min_accuracy = 2.0
+accuracy_decrease = 0.2
+accuracy_increase = 0.16
+max_accuracy = 4.0
+accuracy_increase_delay = 0.5
+dropped_gun = "res://Guns/KMG/KMGDropped.tscn"
+asset = NodePath("KMG")
+
+[node name="KMG" parent="Gun" index="3" instance=ExtResource( 1 )]

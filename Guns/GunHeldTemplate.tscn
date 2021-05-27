@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Guns/GunHeldTemplate.gd" type="Script" id=1]
+[ext_resource path="res://Guns/Mouse.gd" type="Script" id=2]
+
+[node name="GunTemplate" type="Node2D"]
+
+[node name="Mouse" type="Node2D" parent="."]
+z_index = 100
+z_as_relative = false
+script = ExtResource( 2 )
+
+[node name="Gun" type="Node2D" parent="."]
+position = Vector2( 5, -5 )
+script = ExtResource( 1 )
+fire_rate = 0.05
+magazine_size = 20
+reload_time = 1.2
+damage = 8
+bullet_speed = 26
+accuracy_decrease = 0.4
+accuracy_increase = 0.2
+accuracy_increase_delay = 0.8
+
+[node name="ShotTimer" type="Timer" parent="Gun"]
+one_shot = true
+
+[node name="ReloadTimer" type="Timer" parent="Gun"]
+one_shot = true
+
+[node name="Muzzle" type="Position2D" parent="Gun"]
+position = Vector2( 17, 0 )
+
+[node name="Asset" type="Node2D" parent="Gun"]
+[connection signal="timeout" from="Gun/ShotTimer" to="Gun" method="_on_ShotTimer_timeout"]
+[connection signal="timeout" from="Gun/ReloadTimer" to="Gun" method="_on_ReloadTimer_timeout"]

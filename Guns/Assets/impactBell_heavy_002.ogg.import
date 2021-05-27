@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/impactBell_heavy_002.ogg-bfb570d7d2f106122de6656e9455ffae.oggstr"
+
+[deps]
+
+source_file="res://Guns/Assets/impactBell_heavy_002.ogg"
+dest_files=[ "res://.import/impactBell_heavy_002.ogg-bfb570d7d2f106122de6656e9455ffae.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

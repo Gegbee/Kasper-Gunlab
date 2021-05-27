@@ -1,0 +1,94 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Guns/GunAsset.gd" type="Script" id=1]
+[ext_resource path="res://Guns/Assets/impactWood_medium_000.ogg" type="AudioStream" id=2]
+[ext_resource path="res://Guns/Assets/impactPlate_medium_002.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Guns/Assets/switch33.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Guns/Assets/switch38.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Guns/Assets/bookPlace1.ogg" type="AudioStream" id=6]
+
+[sub_resource type="Animation" id=1]
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -10, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:rotation_degrees")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.05, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -10.0, 0.0 ]
+}
+
+[node name="KONE" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_speed = 3.0
+anims/Firing = SubResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = 15.0
+pitch_scale = 0.2
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = 20.0
+pitch_scale = 0.4
+
+[node name="Sprite" type="Node2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="Sprite"]
+position = Vector2( -2, 3 )
+color = Color( 0.407843, 0.466667, 0.478431, 1 )
+polygon = PoolVector2Array( -7, -3, -6, -1, 3, -3, 3, -1, 7, -2, 12, -2, 14, -3, 15, -4, 3, -4, -7, -4 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="Sprite"]
+color = Color( 0.160784, 0.14902, 0.14902, 1 )
+polygon = PoolVector2Array( -2, 0, -1, 3, 1, 2, 1, 0 )
+
+[node name="Polygon2D4" type="Polygon2D" parent="Sprite"]
+position = Vector2( -2, -6 )
+color = Color( 0.305882, 0.368627, 0.384314, 1 )
+polygon = PoolVector2Array( 7, 5, 9, 5, 12, 4, 12, 3, 5, 3, 5, 4 )
+
+[node name="Polygon2D5" type="Polygon2D" parent="Sprite"]
+position = Vector2( 6, -3 )
+color = Color( 0.305882, 0.368627, 0.384314, 1 )
+polygon = PoolVector2Array( 6, 3, 7, 2, 16, 2, 16, 3 )
+
+[node name="Polygon2D3" type="Polygon2D" parent="Sprite"]
+position = Vector2( 0, 1 )
+color = Color( 0.160784, 0.14902, 0.14902, 1 )
+polygon = PoolVector2Array( 6, 0, 7, 2, 9, 1, 10, 0 )
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -10.0
+pitch_scale = 0.6
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -15.0
+pitch_scale = 0.8
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -10.0
+pitch_scale = 0.6
